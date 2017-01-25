@@ -26,7 +26,8 @@ public class Planet : MonoBehaviour {
 
     public void SetNbLat(int nbLat)
     {
-        if (nbLat < 1) nbLat =1;
+		if (nbLat == 0 ) nbLat =1;
+        else if (nbLat < 0) nbLat = -nbLat;
         this.nbLat = nbLat;
         lastNbLat = nbLat;
         Render();
